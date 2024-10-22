@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "net.discdd.tls";
+option java_outer_classname = "TLSTestProto";
+
+service TLSTest {
+  rpc test (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+  string message = 1;
+}
+
+message TestResponse {
+  string reply = 1;
+}
